@@ -53,6 +53,7 @@ const contactsList = [
 
 // Your code goes here
 const allContacts = document.getElementById("display_all_contacts")
+const singleContact = document.getElementById("display_single_contact")
 let idTracker = 0
 
 function createContactBox(){
@@ -68,7 +69,27 @@ function createContactBox(){
   allContacts.append(contact)
 }
 
+function createIndividualContactBox(divid){
+  const contact = document.createElement("div")
+  const img = document.createElement("img")
+  const name = document.createElement("p")
+  const phone = document.createElement("p")
+  const email = document.createElement("p")
+  img.src = 'img/' + contactsList[idTracker].image 
+  contact.append(img)
+  name.textContent = contactsList[idTracker].name
+  contact.append(name)
+}
+
 let contactQuantity = contactsList.length
 for (let contacts = 0; contacts < contactQuantity; contacts++) {
   createContactBox()
 }
+
+allContacts.addEventListener('click', (evt) =>{
+  console.log('hello')
+  let divID = evt.target
+  divID = divID.id
+  createIndividualContactBox(divID)
+
+})

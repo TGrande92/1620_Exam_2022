@@ -114,6 +114,7 @@ main {
   border-radius: 5px;
   padding: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #display_all_contacts img {
@@ -139,3 +140,37 @@ footer p {
   color: var(--grey);
   align-self: center;
 }
+header{
+  width: 100vw;
+}
+
+header{
+  display:flex;
+  align-items:flex-start;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+footer{
+  display:flex;
+  justify-content: center;
+  align-items:flex-end;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+}
+.container {
+  display:flex;
+}
+/* main {
+  display: flex;
+  height: 100vh;
+} */
+#display_all_contacts{
+  margin-top: 5%;
+  height: 100vh;
+}
+
