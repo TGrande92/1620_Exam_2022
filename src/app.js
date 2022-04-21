@@ -52,3 +52,23 @@ const contactsList = [
 ]
 
 // Your code goes here
+const allContacts = document.getElementById("display_all_contacts")
+let idTracker = 0
+
+function createContactBox(){
+  const contact = document.createElement("div")
+  const img = document.createElement("img")
+  const name = document.createElement("p")
+  contact.id = idTracker
+  idTracker = idTracker + 1
+  img.src = contactsList.image 
+  contact.append(img)
+  name.textContent = contactsList.name
+  contact.append(name)
+  allContacts.append(contact)
+}
+
+let contactQuantity = contactsList.length
+for (let contacts = 0; contacts < contactQuantity; contacts++) {
+  createContactBox()
+}
