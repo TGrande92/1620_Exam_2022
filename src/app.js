@@ -61,9 +61,9 @@ function createContactBox(){
   const name = document.createElement("p")
   contact.id = idTracker
   idTracker = idTracker + 1
-  img.src = contactsList.image 
+  img.src = 'img/' + contactsList[idTracker].image 
   contact.append(img)
-  name.textContent = contactsList.name
+  name.textContent = contactsList[idTracker].name
   contact.append(name)
   allContacts.append(contact)
 }
